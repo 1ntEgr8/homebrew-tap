@@ -12,7 +12,7 @@ class ArssReader < Formula
 
   def install
     Language::Node.setup_npm_environment
-    system "./install.sh --only-client"
+    system "./install.sh", "--only-client"
     bin.install "arss"
   end
 
