@@ -17,6 +17,6 @@ class ArssReader < Formula
   end
 
   test do
-    system "#{bin}/arss", "--help"
+    assert_equal "#{Dir.home}/.arss", shell_output("#{bin}/arss --config-path")
   end
 end
